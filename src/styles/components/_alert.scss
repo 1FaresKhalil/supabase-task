@@ -1,0 +1,29 @@
+.alert {
+  visibility: hidden;
+  .before {
+    opacity: 0;
+  }
+  .alert-wrap {
+    top: -100%;
+  }
+  .before,
+  .alert-wrap {
+    transition: all 0.6s ease-in-out;
+  }
+  &.show {
+    visibility: visible;
+    .before {
+      opacity: 0.2;
+    }
+    .alert-wrap {
+      top: 30px;
+      @include mdq(all-tablet) {
+        top: 50px;
+      }
+      @include mdq(all-desktop) {
+        //top: 72px;
+        top: 3.75vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,414 @@
+// stylelint-disable
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.3;
+  }
+
+  60% {
+    opacity: 0.5;
+  }
+
+  80% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.3;
+  }
+
+  60% {
+    opacity: 0.5;
+  }
+
+  80% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+@keyframes fadeInUpBottomToTop {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
+
+@keyframes fadeInUpTopToBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
+
+.fadeInUpBottomToTop {
+  @include animation('0s', '0.8s', 'fadeInUpBottomToTop', 1, 'linear', inherit, both);
+}
+
+.fadeInUpTopToBottom {
+  @include animation('0s', '0.8s', 'fadeInUpTopToBottom', 1, 'linear', inherit, both);
+}
+
+.fadeInUp-scroll,
+.fadeInUp-scroll-v2 {
+  &.visible {
+    transition: transform 0.8s, opacity 0.8s;
+  }
+}
+
+.fadeInUp-scroll-v3 {
+  &.visible {
+    transition: transform 1.8s, opacity 1.8s;
+    transition-delay: 0.8;
+  }
+}
+
+.fadeInUp-scroll,
+.fadeInUp-scroll-v2,
+.fadeInUp-scroll-v3 {
+  opacity: 0;
+  transform: translateY(50px);
+
+  &[data-position*='left-to-right'] {
+    transform: translateX(-50px);
+  }
+
+  &[data-position*='right-to-left'] {
+    transform: translateX(50px);
+  }
+
+  &[data-position*='top-to-bottom'] {
+    transform: translateY(-50px);
+  }
+
+  &[data-position*='bottom-to-top'] {
+    transform: translateY(50px);
+  }
+
+  &.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+
+    &[data-position*='left-to-right'],
+    &[data-position*='right-to-left'] {
+      transform: translateX(0) !important;
+    }
+  }
+}
+
+.scale-scroll {
+  opacity: 0;
+  transform: scale(0.9);
+
+  &.visible {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+    transition: all 1s;
+  }
+}
+
+.image-animation {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $color-default-white;
+    transition: left 600ms cubic-bezier(0.835, 0.015, 0.245, 0.995) 0s;
+  }
+
+  &::after {
+    content: '';
+    height: 100%;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(#f7f7f9, 0.95);
+  }
+
+  &.animate {
+    &::before {
+      left: 100%;
+    }
+  }
+}
+
+@keyframes image-animation {
+  from {
+    background-color: $color-default-white;
+  }
+
+  to {
+    background-color: transparent;
+  }
+}
+
+@keyframes image-animation-filter {
+  0% {
+    width: 0;
+  }
+
+  50% {
+    width: 100%;
+  }
+}
+
+.text-title-animation {
+  span {
+    opacity: 0;
+    visibility: hidden;
+    transition: 300ms opacity, 300ms visibility;
+
+    &.show {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+//external link svg animation
+@include keyframes(animate-svg-stroke-1) {
+  0% {
+    stroke-dashoffset: 36.43690872192383px;
+    stroke-dasharray: 36.43690872192383px;
+  }
+
+  100% {
+    stroke-dashoffset: 72.87381744384766px;
+    stroke-dasharray: 36.43690872192383px;
+  }
+}
+
+@include keyframes(animate-svg-stroke-2) {
+  0% {
+    stroke-dashoffset: 11.515999794006348px;
+    stroke-dasharray: 11.515999794006348px;
+  }
+
+  100% {
+    stroke-dashoffset: 23.031999588012695px;
+    stroke-dasharray: 11.515999794006348px;
+  }
+}
+
+@include keyframes(animate-svg-stroke-3) {
+  0% {
+    stroke-dashoffset: 14.33618450164795px;
+    stroke-dasharray: 14.33618450164795px;
+  }
+
+  100% {
+    stroke-dashoffset: 28.6723690032959px;
+    stroke-dasharray: 14.33618450164795px;
+  }
+}
+
+@include keyframes(scrolled-icons) {
+  0% {
+    opacity: 0;
+    transform: scale(0.75);
+  }
+
+  20% {
+    opacity: 1;
+    transform: scale(1) translateY(40%);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(1) translateY(160%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.75) translateY(200%);
+  }
+}
+
+@include keyframes(pattern-opacity) {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@include keyframes(pattern-v2-scale) {
+  0% {
+    transform: translate(595px, -559px) scale(1);
+  }
+  100% {
+    transform: translate(595px, -559px) scale(1.3);
+  }
+}
+
+@include keyframes(pattern-v3-scale) {
+  0% {
+    transform: translate(552px, 570px) scale(1);
+  }
+  100% {
+    transform: translate(552px, 570px) scale(1.3);
+  }
+}
+
+@include keyframes(pattern-v4-opacity) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(gradient) {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@include keyframes(pattern-v5-fill-1) {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(152, 143, 134);
+  }
+}
+
+@include keyframes(pattern-v5-fill-2) {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(152, 143, 134);
+  }
+}
+
+@include keyframes(pattern-v5-fill-3) {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(152, 143, 134);
+  }
+}
+
+@include keyframes(pattern-v5-fill-4) {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(152, 143, 134);
+  }
+}
+
+@include keyframes(pattern-v5-fill-5) {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(152, 143, 134);
+  }
+}
+
+@include keyframes(pattern-v5-fill-6) {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(152, 143, 134);
+  }
+}
+// new
+.animate-width {
+  animation-name: width-animation;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes width-animation {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 105%;
+  }
+  100% {
+    width: 100%;
+  }
+}

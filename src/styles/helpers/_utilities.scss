@@ -1,0 +1,828 @@
+body {
+  // @extend .nice-scroll-bar;
+  // overflow-x: hidden;
+}
+ul {
+  list-style: unset;
+}
+ol {
+  list-style: auto;
+}
+section {
+  transition:
+    transform 1s ease-in-out,
+    opacity 1s ease-in-out;
+}
+.transition-speed {
+  transition: all 0.4s ease-in-out;
+}
+.transition-more-speed {
+  transition: all 0.2s ease-in-out;
+}
+.border-radius-15 {
+  border-radius: 15px;
+  @include mdq(all-desktop) {
+    border-radius: 0.78125vw;
+  }
+}
+// fonts
+// .corporate-regular {
+//   @include CorporateRegular;
+// }
+
+// .corporate-bold {
+//   @include CorporateBold;
+// }
+// .corporate-bold-italic {
+//   @include CorporateBoldItalic;
+// }
+// .GESS-unique-light {
+//   @include GESSUniqueLight;
+// }
+
+.opacity-p-70 {
+  p {
+    opacity: 0.7;
+  }
+}
+.opacity-p-50 {
+  p {
+    opacity: 0.5;
+  }
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-size-95 {
+  font-size: 95px;
+  @include mdq(all-mobile) {
+    font-size: 45px;
+    line-height: 55px;
+  }
+  @include mdq(all-desktop) {
+    @include propInVW(font-size, 95);
+  }
+}
+.font-size-68 {
+  font-size: 68px;
+  line-height: 78px;
+  @include mdq(all-mobile) {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  @include mdq(all-tablet) {
+    font-size: 44px;
+    line-height: 64px;
+  }
+  @include mdq(all-desktop) {
+    @include propInVW(font-size, 68);
+    @include propInVW(line-height, 78);
+  }
+  &.line-height-as-font {
+    @include mdq(all-desktop) {
+      line-height: 3.54166vw;
+    }
+  }
+}
+.font-size-64 {
+  font-size: 64px;
+  line-height: 76px;
+  @include mdq(all-mobile) {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  @include mdq(all-tablet) {
+    font-size: 44px;
+    line-height: 64px;
+  }
+  @include mdq(all-desktop) {
+    @include propInVW(font-size, 64);
+    @include propInVW(line-height, 76);
+  }
+  &.line-height-as-font {
+    @include mdq(all-desktop) {
+      line-height: 3.333vw;
+    }
+  }
+}
+.font-size-48 {
+  font-size: 48px;
+  line-height: 72px;
+  @include mdq(all-mobile) {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  @include mdq(all-tablet) {
+    font-size: 38px;
+    line-height: 50px;
+  }
+  @include mdq(all-desktop) {
+    @include propInVW(font-size, 48);
+    @include propInVW(line-height, 72);
+  }
+}
+.font-size-46 {
+  font-size: 46px;
+  line-height: 56px;
+  @include mdq(all-mobile) {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  @include mdq(all-tablet) {
+    font-size: 38px;
+    line-height: 50px;
+  }
+  @include mdq(all-desktop) {
+    @include propInVW(font-size, 46);
+    @include propInVW(line-height, 56);
+  }
+}
+.font-size-40 {
+  font-size: 40px;
+  line-height: 60px;
+  @include mdq(all-mobile) {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  @include mdq(all-tablet) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  @include mdq(all-desktop) {
+    @include propInVW(font-size, 40);
+    @include propInVW(line-height, 60);
+  }
+}
+.font-size-42 {
+  font-size: 42px;
+  line-height: 55px;
+  @include mdq(all-mobile) {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  @include mdq(all-tablet) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  @include mdq(all-desktop) {
+    @include propInVW(font-size, 38);
+    @include propInVW(line-height, 48);
+  }
+}
+.font-size-38 {
+  font-size: 38px;
+  line-height: 45px;
+
+  @include mdq(all-mobile) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  @include mdq(all-desktop) {
+    @include propInVW(font-size, 38);
+
+    @include propInVW(line-height, 45);
+  }
+}
+.font-size-35 {
+  font-size: 35px;
+  line-height: 40px;
+  @include mdq(all-mobile) {
+    font-size: 22px;
+    line-height: 35px;
+  }
+  @include mdq(all-tablet) {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  @include mdq(all-desktop) {
+    @include propInVW(font-size, 35);
+
+    @include propInVW(line-height, 40);
+  }
+}
+.font-size-32 {
+  font-size: 32px;
+  line-height: 40px;
+  @include mdq(all-mobile) {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  @include mdq(all-tablet) {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  @include mdq(all-desktop) {
+    @include propInVW(font-size, 32);
+
+    @include propInVW(line-height, 40);
+  }
+}
+.font-size-30 {
+  font-size: 30px;
+  line-height: 46px;
+  @include mdq(all-desktop) {
+    @include propInVW(font-size, 30);
+
+    @include propInVW(line-height, 46);
+  }
+}
+.font-size-28 {
+  font-size: 28px;
+  line-height: 38px;
+  @include mdq(all-mobile) {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  @include mdq(all-desktop) {
+    @include propInVW(font-size, 28);
+
+    @include propInVW(line-height, 38);
+  }
+}
+.font-size-26 {
+  font-size: 26px;
+  line-height: 36px;
+  @include mdq(all-desktop) {
+    @include propInVW(font-size, 26);
+
+    @include propInVW(line-height, 36);
+  }
+}
+.font-size-25 {
+  font-size: 25px;
+  line-height: 35px;
+  @include mdq(all-mobile) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  @include mdq(all-desktop) {
+    @include propInVW(font-size, 25);
+    @include propInVW(line-height, 35);
+  }
+}
+.font-size-24 {
+  font-size: 24px;
+  line-height: 36px;
+  @include mdq(all-mobile) {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  @include mdq(all-tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  @include mdq(all-desktop) {
+    @include propInVW(font-size, 24);
+
+    @include propInVW(line-height, 36);
+  }
+  &.line-height-as-font {
+    @include mdq(all-desktop) {
+      line-height: 1.25vw;
+    }
+  }
+}
+.font-size-22 {
+  font-size: 22px;
+  line-height: 32px;
+  @include mdq(all-mobile) {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  @include mdq(all-desktop) {
+    @include propInVW(font-size, 22);
+
+    @include propInVW(line-height, 32);
+  }
+  &.line-height-as-font {
+    @include mdq(all-desktop) {
+      line-height: 1.14583vw !important;
+    }
+  }
+}
+.font-size-21 {
+  font-size: 21px;
+  line-height: 25px;
+
+  @include mdq(all-mobile) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  @include mdq(all-desktop) {
+    @include propInVW(font-size, 21);
+
+    @include propInVW(line-height, 25);
+  }
+}
+.font-size-20 {
+  font-size: 20px;
+  line-height: 30px;
+
+  @include mdq(all-mobile) {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  @include mdq(all-desktop) {
+    @include propInVW(font-size, 20);
+    @include propInVW(line-height, 30);
+  }
+}
+.font-size-18 {
+  font-size: 18px;
+  line-height: 30px;
+  @include mdq(all-mobile) {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  @include mdq(all-desktop) {
+    @include propInVW(font-size, 18);
+    @include propInVW(line-height, 30);
+  }
+}
+.font-size-16 {
+  font-size: 16px;
+  line-height: 24px;
+  @include mdq(all-desktop) {
+    @include propInVW(font-size, 16);
+    @include propInVW(line-height, 24);
+  }
+  @include mdq(all-mobile) {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+.font-size-15 {
+  font-size: 15px;
+  line-height: 25px;
+  @include mdq(all-desktop) {
+    @include propInVW(font-size, 15);
+    @include propInVW(line-height, 25);
+  }
+}
+.font-size-14 {
+  font-size: 14px;
+  line-height: 24px;
+  @include mdq(all-desktop) {
+    @include propInVW(font-size, 14);
+    @include propInVW(line-height, 24);
+  }
+}
+.font-size-12 {
+  font-size: 12px;
+  line-height: 22px;
+  @include mdq(all-desktop) {
+    @include propInVW(font-size, 12);
+    @include propInVW(line-height, 22);
+  }
+  &.line-height-as-font {
+    @include mdq(all-desktop) {
+      @include propInVW(line-height, 12);
+    }
+  }
+}
+
+.text-1-line {
+  &,
+  p {
+    /*     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+
+    overflow: hidden !important;
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-line-clamp: 1 !important;
+    white-space: pre-wrap !important;
+  }
+}
+.text-2-lines {
+  &,
+  p {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+}
+.text-3-lines {
+  &,
+  p {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+}
+.text-4-lines {
+  &,
+  p {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 4 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+}
+.text-default-white {
+  color: var(--color-default-white);
+}
+
+.text-default-black {
+  color: var(--color-default-black);
+}
+
+.text-math-black {
+  color: var(--color-math-black);
+}
+.text-math-black2 {
+  color: var(--color-math-black2);
+}
+.text-math-black3 {
+  color: var(--color-math-black3);
+}
+
+.text-dark-blue {
+  color: var(--color-dark-blue);
+}
+
+.text-dark-blue-2 {
+  color: var(--color-dark-blue-2);
+}
+
+.text-light-blue {
+  color: var(--color-light-blue);
+}
+.text-light-blue2 {
+  color: var(--color-light-blue2);
+}
+.text-light-blue3 {
+  color: var(--color-light-blue3);
+}
+.text-light-gray {
+  color: var(--color-light-gray);
+}
+.text-light-yellow {
+  color: var(--color-light-yellow);
+}
+.text-font {
+  color: var(--color-font);
+}
+.text-light-font {
+  color: var(--color-light-font);
+}
+.text-light-font2 {
+  color: var(--color-light-font2);
+}
+
+.text-green {
+  color: var(--color-green);
+}
+.text-green2 {
+  color: var(--color-green2);
+}
+.text-red {
+  color: var(--color-red);
+}
+.text-pink {
+  color: var(--color-pink);
+}
+
+.text-grey {
+  color: var(--color-grey);
+}
+.text-grey2 {
+  color: var(--color-grey2);
+}
+
+.text-purple {
+  color: var(--color-purple);
+}
+.text-orange {
+  color: var(--color-orange);
+}
+.hover-text-yellow {
+  &:hover {
+    @extend .transition-speed;
+    color: var(--color-light-yellow);
+  }
+}
+.hover-text-orange {
+  &:hover {
+    @extend .transition-speed;
+    color: var(--color-orange);
+  }
+}
+.hover-text-white {
+  &:hover {
+    @extend .transition-speed;
+    opacity: 1 !important;
+
+    border-top-color: var(--color-default-white) !important;
+    color: var(--color-default-white) !important;
+  }
+}
+.bg-default-white {
+  background-color: var(--color-default-white);
+}
+
+.bg-default-black {
+  background-color: var(--color-default-black);
+}
+
+.bg-math-black {
+  background-color: var(--color-math-black);
+}
+
+.bg-math-black2 {
+  background-color: var(--color-math-black2);
+}
+.bg-math-black3 {
+  background-color: var(--color-math-black3);
+}
+
+.bg-dark-blue {
+  background-color: var(--color-dark-blue);
+}
+
+.bg-dark-blue-2 {
+  background-color: var(--color-dark-blue-2);
+}
+.bg-dark-blue-2-opacity {
+  background-color: rgba(29, 81, 164, 0.2);
+}
+
+.bg-light-blue {
+  background-color: var(--color-light-blue);
+}
+.bg-light-blue2 {
+  background-color: var(--color-light-blue2);
+}
+.bg-light-blue3 {
+  background-color: var(--color-light-blue3);
+}
+.bg-light-gray {
+  background-color: var(--color-light-gray);
+}
+.bg-light-yellow {
+  background-color: var(--color-light-yellow);
+}
+.bg-orange {
+  background-color: var(--color-orange);
+}
+
+.bg-font {
+  background-color: var(--color-font);
+}
+.bg-light-font {
+  background-color: var(--color-light-font);
+}
+.bg-light-font2 {
+  background-color: var(--color-light-font2);
+}
+
+.bg-green {
+  background-color: var(--color-green);
+}
+.bg-green2 {
+  background-color: var(--color-green2);
+}
+.bg-red {
+  background-color: var(--color-red);
+}
+.bg-pink {
+  background-color: var(--color-pink);
+}
+.bg-green-grey {
+  background-color: rgba(0, 118, 74, 0.1);
+}
+.bg-green-grey2 {
+  background-color: rgba(0, 118, 74, 0.2);
+}
+.bg-grey {
+  background-color: var(--color-grey);
+}
+.bg-grey2 {
+  background-color: var(--color-grey2);
+}
+
+.bg-purple {
+  background-color: var(--color-purple);
+}
+.border-light-yellow {
+  border-color: var(--color-light-yellow);
+}
+.border-green {
+  border-color: var(--color-green);
+}
+.opacity-30 {
+  opacity: 0.3;
+}
+
+.main-title {
+  &,
+  h1,
+  h2,
+  h3 {
+    @extend .font-size-64;
+    // @extend .corporate-bold;
+    text-transform: capitalize;
+  }
+}
+
+.margin-p {
+  p {
+    &:not(:last-child) {
+      margin-bottom: 50px;
+      @include mdq(all-desktop) {
+        margin-bottom: 2.60416vw;
+      }
+    }
+  }
+}
+.read-btn {
+  @extend .font-size-24;
+  @extend .transition-speed;
+  // @extend .corporate-regular;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  & > svg {
+    @extend .transition-speed;
+
+    width: auto;
+    height: 29px;
+    @include mdq(all-desktop) {
+      height: 1.510416vw;
+    }
+    path {
+      stroke: var(--color-orange);
+    }
+  }
+  &.white {
+    & > span {
+      @extend .text-default-white;
+    }
+  }
+  &.black {
+    & > span {
+      @extend .text-math-black;
+    }
+  }
+  &:hover,
+  &.active {
+    & > span {
+      @extend .text-orange;
+    }
+    & > svg {
+      width: auto;
+      @include flipProperty('margin-left', 'margin-right', 20px);
+      @include mdq(all-desktop) {
+        @include flipProperty('margin-left', 'margin-right', 1.0416vw);
+      }
+    }
+  }
+}
+/* input[type='checkbox']:not(.checkbox):not(.aa-switch-check),
+input[type='radio'] {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  appearance: none;
+  border: 1px solid rgba(3, 3, 4, 0.3);
+  border-radius: 4px;
+  width: 18px;
+  height: 18px;
+  @include flipProperty('margin-right', 'margin-left', 8px);
+  @include mdq(all-desktop) {
+    border-radius: 0.2083vw;
+    width: 0.9375vw;
+    height: 0.9375vw;
+    @include flipProperty('margin-right', 'margin-left', 0.41666vw);
+  }
+  &::after {
+    @extend .transition-speed;
+    content: '';
+    position: absolute;
+    background-size: contain;
+    display: none;
+    z-index: 5;
+    height: 18px;
+    width: 18px;
+    top: 0;
+    //left: 4px;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    // background-image: url("../img/icons/white-check.svg");
+    background-position: 25% center;
+    left: 0;
+    right: 0;
+    @include mdq(all-desktop) {
+      width: 0.9375vw;
+      height: 0.9375vw;
+    }
+  }
+
+  &:checked {
+    // @extend .bg-orange;
+    // border-color: var(--color-orange);
+
+    &::after {
+      display: block;
+    }
+  }
+}
+input[type='radio'] {
+  border-radius: 50%;
+  overflow: hidden;
+} */
+// .radio,
+// .checkbox,
+// .input-checkbox,
+// .input-radio {
+//   position: relative;
+//   outline: none;
+//   appearance: none;
+//   &::after {
+//     content: '';
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     top: 0;
+//     left: 0;
+//     border-radius: 50%;
+//     border: 2px solid rgba(0, 0, 0, 0.2);
+//   }
+
+//   &:checked,
+//   &.checked {
+//     &::after {
+//       border: 4px solid var(--color-green);
+//     }
+//   }
+// }
+// .checkbox,
+// .input-checkbox {
+//   &::after {
+//     border-radius: 0;
+//   }
+//   &.checked,
+//   &:checked {
+//     &::after {
+//       background-image: url('../img/icons/check-green.svg');
+//       background-size: contain;
+//       background-position: center;
+//       background-repeat: no-repeat;
+//       border: 2px solid var(--color-green);
+//     }
+//   }
+// }
+// .input-checkbox {
+//   &.checked {
+//     &::after {
+//       background-image: url('../img/icons/check-black.svg');
+//       border-color: var(--color-default-black);
+//     }
+//   }
+// }
+.error-text {
+  @apply mt-2 lg:mt-[.3vw];
+  @extend .font-size-15;
+}
+.error-message {
+  @apply lg:mb-[.3vw]  inline-block;
+  transform: translateY(-50%);
+  @extend .font-size-15;
+}
+.form-icon {
+  img {
+    @include mdq(all-mobile) {
+      width: 14px;
+    }
+    @include mdq(all-desktop) {
+      width: 1.25vw;
+    }
+  }
+}
+.input-border-red {
+  @apply border border-solid border-red-500;
+}
+
+.input-placeholder-red {
+  &::placeholder {
+    color: red !important;
+  }
+}
+.main-box-shadow {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}

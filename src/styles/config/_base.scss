@@ -1,0 +1,134 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  //overflow-x: hidden;
+  //overflow-y: auto;
+  scroll-behavior: smooth;
+  &.no-scroll {
+    overflow: hidden !important;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+body {
+  // @extend .corporate-regular;
+  position: relative;
+  // background-color: var(--color-math-black);
+  -webkit-font-smoothing: antialiased;
+
+  &.is-scroll {
+    overflow: hidden;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &.menu-opened {
+    &::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      background: rgba(35, 34, 33, 0.7);
+    }
+    .topbar {
+      a {
+        filter: brightness(0.3);
+      }
+    }
+  }
+}
+
+*:focus {
+  outline: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+.sm-md-overflow-none {
+  @include mdq(xs-md) {
+    overflow: hidden;
+  }
+}
+
+.container {
+  @media only screen and (min-width: 320px) and (max-width: 991px) {
+    max-width: 100% !important;
+  }
+  @media only screen and (min-width: 992px) {
+    max-width: calc(100% - 120px) !important;
+  }
+  @media only screen and (min-width: 1100px) {
+    max-width: calc(100% - 120px) !important;
+  }
+  @media only screen and (min-width: 1200px) {
+    max-width: calc(100% - 140px) !important;
+  }
+  @media only screen and (min-width: 1480px) {
+    max-width: calc(100% - 240px) !important;
+  }
+  @media only screen and (min-width: 1799px) {
+    max-width: calc(100% - 200px) !important;
+  }
+  @media only screen and (min-width: 1800px) {
+    max-width: 1640px !important;
+  }
+  @include mdq(xs-md) {
+    padding-right: 24px !important;
+    padding-left: 24px !important;
+  }
+}
+.fade#responsibleBusiness {
+  opacity: 1 !important;
+}
+.label-floating input:not(:placeholder-shown) {
+  padding-top: 1.4rem;
+}
+.label-floating input:not(:placeholder-shown) ~ label {
+  font-size: 0.6rem;
+  transition: all 0.2s ease-in-out;
+  color: #1f9d55;
+}
+.eye {
+  cursor: pointer;
+}
+.progressItem {
+  position: static;
+}
+.span-6 {
+  grid-column: span 6 / span 12;
+}
+.span-12 {
+  grid-column: span 12 / span 12;
+}
+.span-4 {
+  grid-column: span 4 / span 12;
+}
+.span-3 {
+  grid-column: span 3 / span 12;
+}

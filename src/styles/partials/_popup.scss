@@ -1,0 +1,231 @@
+// .popup {
+//   @extend .transition-speed;
+//   position: fixed;
+//   width: 100%;
+//   height: 100%;
+//   right: 0;
+//   left: 0;
+//   top: 0;
+//   bottom: 0;
+//   z-index: -9;
+//   opacity: 0;
+//   .popup-wrapper {
+//     border-radius: 15px;
+//     //width: 1516px;
+//     right: 202px;
+//     left: 202px;
+//     width: auto;
+//     height: 774px;
+//     top: 146px;
+//     @include mdq(all-desktop) {
+//       right: 10.52083vw;
+//       left: 10.52083vw;
+//       height: 40.3125vw;
+//       top: 7.604166vw;
+//     }
+//     .main-img {
+//       width: 585px;
+//       @include mdq(all-desktop) {
+//         width: 30.46875vw;
+//       }
+//     }
+//     .close-popup {
+//       @extend .transition-speed;
+//       z-index: 9;
+//       position: absolute;
+//       top: 31px;
+//       @include flipProperty('right', 'left', 31px);
+//       @include mdq(all-desktop) {
+//         @include flipProperty('right', 'left', 1.61458vw);
+//         top: 1.61458vw;
+//       }
+//       svg {
+//         path,
+//         line {
+//           fill: var(--color-dark-blue);
+//         }
+//         .path-1 {
+//           transform: rotate(45deg) translate(12px, -11px);
+//         }
+//         .path-2 {
+//           display: none;
+//         }
+//         .path-3 {
+//           transform: rotate(-43deg) translate(-19px, 4px);
+//         }
+//       }
+//       &:hover {
+//         svg {
+//           path,
+//           line {
+//             fill: var(--color-light-blue);
+//           }
+//         }
+//       }
+//     }
+//     .content {
+//       // padding: 81px;
+//       [dir='ltr'] & {
+//         padding: 65px 92px 73px 78px;
+//       }
+//       [dir='rtl'] & {
+//         padding: 65px 78px 73px 92px;
+//       }
+//       @include mdq(all-desktop) {
+//         // padding: 4.21875vw;
+
+//         [dir='ltr'] & {
+//           padding: 3.385416vw 4.79166vw 3.80208vw 4.0625vw;
+//         }
+//         [dir='rtl'] & {
+//           padding: 3.385416vw 4.0625vw 3.80208vw 4.79166vw;
+//         }
+//       }
+//       .desc {
+//         ol {
+//           @extend .font-size-22;
+//           @include flipProperty('padding-left', 'padding-right', 35px);
+//           @include mdq(all-desktop) {
+//             @include flipProperty('padding-left', 'padding-right', 1.822916vw);
+//           }
+//         }
+//       }
+//       .offer-section {
+//         padding-top: 28px;
+//         padding-bottom: 28px;
+//         margin-top: 28px;
+//         margin-bottom: 28px;
+//         border-top: 1px solid rgba(0, 0, 0, 0.2);
+//         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+//         @include mdq(all-desktop) {
+//           padding-top: 1.4583vw;
+//           padding-bottom: 1.4583vw;
+//           margin-top: 1.4583vw;
+//           margin-bottom: 1.4583vw;
+//         }
+//       }
+//       .offer-desc {
+//         width: 521px;
+//         @include mdq(all-desktop) {
+//           width: 27.135416vw;
+//         }
+//         ul {
+//           list-style-position: inside;
+//           // @include flipProperty('padding-left', 'padding-right', 35px);
+//           display: flex;
+//           flex-wrap: wrap;
+//           // gap: 0 68px;
+//           margin-bottom: 0;
+//           margin-top: 15px;
+//           @include mdq(all-desktop) {
+//             // gap: 0 3.54166vw;
+//             @include flipProperty('padding-left', 'padding-right', 0.82292vw);
+//             margin-top: 0.78125vw;
+//           }
+//           li {
+//             width: 25%;
+//             @include mdq(all-desktop) {
+//               //@include flipProperty('margin-right', 'margin-left', 52px);
+//               //@include flipProperty('margin-right', 'margin-left', 2.7083vw);
+//             }
+//             &::marker {
+//               @extend .text-math-black;
+//               opacity: 0.5;
+//             }
+//           }
+//         }
+//       }
+//       .price-section {
+//         gap: 0 48px;
+//         @include mdq(all-desktop) {
+//           gap: 0 2.5vw;
+//         }
+//         .price-wrap {
+//           gap: 0 13px;
+//           @include mdq(all-desktop) {
+//             gap: 0 0.677083vw;
+//           }
+//         }
+//         .price-desc {
+//           ul {
+//             margin: 0;
+//             @include flipProperty('padding-left', 'padding-right', 18px);
+//             @include mdq(all-desktop) {
+//               @include flipProperty('padding-left', 'padding-right', 0.9375vw);
+//             }
+//             li {
+//               &::marker {
+//                 @extend .font-size-18;
+//                 @extend .text-math-black;
+//                 opacity: 0.5;
+//               }
+//             }
+//           }
+//         }
+//       }
+//       .booking {
+//         margin-top: 72px;
+//         @include mdq(all-desktop) {
+//           margin-top: 3.75vw;
+//         }
+//         @media screen and (min-width: 1023px) and (max-width: 1200px) {
+//           margin-top: 2.75vw;
+//         }
+//         .book-btn {
+//           padding: 6px 20px;
+//           @include mdq(all-desktop) {
+//             padding: 0.3125vw 1.04166vw;
+//           }
+//         }
+//       }
+//     }
+//   }
+//   &.show {
+//     opacity: 1;
+//     z-index: 9999;
+//   }
+// }
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  // height: 934px;
+  // max-width: 800px;
+  // max-height: 90%;
+  overflow: hidden;
+}
+
+.popup-container.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#close-button {
+  position: absolute;
+  top: 5%;
+  //right: 4%;
+  @include flipProperty('right', 'left', 4%);
+  z-index: 100;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  // background-color: white;
+  // color: black;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: unset;
+  }
+}

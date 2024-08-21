@@ -1,0 +1,157 @@
+@mixin img-fluid {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-fluid {
+  @include img-fluid;
+}
+
+@mixin mdq($size) {
+  @if $size == xs {
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      @content;
+    }
+  } @else if $size == md {
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+      @content;
+    }
+  } @else if $size == lg-2 {
+    @media only screen and (min-width: 1280px) and (max-width: 1365px) {
+      @content;
+    }
+  } @else if $size == xl {
+    @media only screen and (min-width: 1366px) and (max-width: 1439px) {
+      @content;
+    }
+  } @else if $size == xxl {
+    @media only screen and (min-width: 1440px) and (max-width: 1535px) {
+      @content;
+    }
+  } @else if $size == 3xl {
+    @media only screen and (min-width: 1536px) and (max-width: 1679px) {
+      @content;
+    }
+  } @else if $size == 4xl {
+    @media only screen and (min-width: 1680px) and (max-width: 1919px) {
+      @content;
+    }
+  } @else if $size == all-desktop {
+    @media only screen and (min-width: 1023px) {
+      @content;
+    }
+  } @else if $size == all-tablet {
+    @media only screen and (min-width: 700px) and (max-width: 1022px) {
+      @content;
+    }
+  } @else if $size == tablet-mobile {
+    @media only screen and (max-width: 1022px) {
+      @content;
+    }
+  } @else if $size == all-mobile {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  }
+}
+
+//transition mixin
+@mixin transition($transition...) {
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+
+//animation mixin
+@mixin animation($delay, $duration, $animation, $count, $function, $direction, $fillMode) {
+  -webkit-animation-delay: #{$delay};
+  -webkit-animation-duration: #{$duration};
+  -webkit-animation-name: #{$animation};
+  -webkit-animation-iteration-count: $count;
+  -webkit-animation-timing-function: #{$function};
+  -webkit-animation-fill-mode: $fillMode;
+
+  -moz-animation-delay: #{$delay};
+  -moz-animation-duration: #{$duration};
+  -moz-animation-name: #{$animation};
+  -moz-animation-iteration-count: $count;
+  -moz-animation-timing-function: #{$function};
+  -moz-animation-fill-mode: $fillMode;
+
+  animation-delay: #{$delay};
+  animation-duration: #{$duration};
+  animation-name: #{$animation};
+  animation-iteration-count: $count;
+  animation-timing-function: #{$function};
+  animation-direction: $direction;
+  animation-fill-mode: $fillMode;
+}
+
+//keyframe mixin
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@mixin rem($property, $values...) {
+  $max: length($values);
+  $pxValues: '';
+  $remValues: '';
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $pxValues: #{$pxValues + $value * 10}px;
+
+    @if $i < $max {
+      $pxValues: #{$pxValues + ' '};
+    }
+  }
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $remValues: #{$remValues + $value}rem;
+
+    @if $i < $max {
+      $remValues: #{$remValues + ' '};
+    }
+  }
+
+  #{$property}: $pxValues;
+  #{$property}: $remValues;
+}
+
+@mixin flipProperty($ltr-property, $rtl-property, $value) {
+  [dir='ltr'] & {
+    #{$ltr-property}: $value;
+  }
+
+  [dir='rtl'] & {
+    #{$rtl-property}: $value;
+  }
+}
+@mixin propInVW($property, $px) {
+  #{$property}: $px / 1440 * 100 + vw;  
+}
